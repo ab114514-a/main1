@@ -1,0 +1,10 @@
+jobs:
+  build-mac-app:
+    runs-on: macos-latest   # 就是这里
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile macOS App
+        run: |
+          # 你的编译命令，例如：
+          clang++ -std=c++17 main.mm -framework Cocoa -framework Foundation -o Monitor
